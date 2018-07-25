@@ -7,6 +7,10 @@ namespace BaseClass
     {
 		public void Test()
 		{
+			var assName = typeof(RegistryKey).Assembly;
+
+			Console.WriteLine("Using " + assName.FullName + " at " + assName.Location);
+
 			if (Registry.LocalMachine == null)
 				Console.WriteLine("LocalMachine is null!");
 			else
